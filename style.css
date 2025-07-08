@@ -1,0 +1,141 @@
+/* Base */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: rgb(34, 81, 65);
+  font-family: sans-serif;
+  color: #fff;
+  font-size: 1.2em;
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+p {
+  font-size: 1.2em;
+}
+
+header {
+  background: #000;
+  text-align: center;
+  padding: 20px 0;
+}
+
+header img {
+  width: 30%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+main {
+  text-align: center;
+  padding: 20px;
+}
+
+table {
+  margin: 0 auto;
+  width: 90%;
+  border-collapse: collapse;
+  border: 2px solid #000;
+  font-size: 1.2em;
+}
+
+th, td {
+  padding: 10px;
+  text-align: center;
+}
+
+footer {
+  margin-top: 40px;
+  font-size: 1em;
+  color: #ccc;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideLeft {
+  0% { opacity: 0; transform: translateX(-100px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideRight {
+  0% { opacity: 0; transform: translateX(100px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+.fade-in {
+  animation: fadeIn 2s ease-out forwards;
+  opacity: 0;
+}
+
+.slide-left {
+  animation: slideLeft 2s ease forwards;
+  opacity: 0;
+}
+
+.slide-right {
+  animation: slideRight 2s ease forwards;
+  opacity: 0;
+}
+
+.zoom:hover {
+  transform: scale(1.05);
+  transition: transform 1s ease;
+}
+
+a img:hover {
+  transform: scale(1.2);
+  transition: transform 1s ease;
+}
+
+/* Scroll-triggered */
+.scroll-animate {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 2s ease-out;
+}
+
+.slide-right-on-scroll.visible {
+  opacity: 1;
+  transform: translateX(0);
+  animation: slideRight 2s ease forwards;
+}
+
+.slide-left-on-scroll.visible {
+  opacity: 1;
+  transform: translateX(0);
+  animation: slideLeft 2s ease forwards;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  header img {
+    width: 80%;
+  }
+
+  table {
+    font-size: 1em;
+    display: block;
+    overflow-x: auto;
+  }
+
+  th, td {
+    display: block;
+    width: 100%;
+    text-align: left;
+    border-bottom: 1px solid #000;
+  }
+}

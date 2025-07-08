@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AGcoding</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="zoom">
+      <img src="images/logo-and-name.png" alt="AGcoding Logo">
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Welcome -->
+    <section id="welcome" class="fade-in">
+      <h1 style="color: aquamarine;">Welcome to AGcoding</h1>
+      <h3>The only company that offers the <strong>best content for the best price!</strong></h3>
+      <p>Right now we teach only <strong>Python</strong> and <strong>Scratch</strong>.<br>More courses coming soon 🔥</p>
+    </section>
+
+    <br><br><hr><br><br>
+
+    <!-- Plans -->
+    <section id="plans" class="slide-left">
+      <h1 style="color: aquamarine;">Our Plans</h1>
+      <table>
+        <tr>
+          <th style="color: gold;">GOLD</th>
+          <th style="color: lightblue;">DIAMOND</th>
+        </tr>
+        <tr>
+          <td style="background: gold;">short video 🔥<br>live sessions ❌<br>forum ❌</td>
+          <td style="background: lightblue;">short video 🔥<br>live sessions 🔥<br>forum 🔥</td>
+        </tr>
+        <tr>
+          <td style="background: gold;">$100</td>
+          <td style="background: lightblue;">$200</td>
+        </tr>
+      </table>
+    </section>
+
+    <br><br><hr><br><br>
+
+    <!-- Accounts -->
+    <section id="accounts" class="scroll-animate slide-right-on-scroll">
+      <h1 style="color: aquamarine;">Our Accounts</h1>
+      <p>
+        <a href="https://www.youtube.com/channel/UCZ2z_eWDUY14qcTEWNAidPA"
+           target="_blank"
+           style="color: #fff; text-decoration: none; font-size: 1.2em;">
+          <img src="images/You-logo.jpg" style="width: 40px; vertical-align: middle;">
+          YouTube
+        </a>
+      </p>
+    </section>
+
+    <br><br><hr><br><br>
+
+    <!-- Contact -->
+    <section id="contact" class="scroll-animate slide-left-on-scroll">
+      <h1 style="color: aquamarine;">Contact Us</h1>
+      <p>
+        <a href="https://discord.com/" target="_blank"
+           style="color: #fff; text-decoration: none; font-size: 1.2em;">
+          <img src="images/dis-logo.png" style="width: 40px; vertical-align: middle;">
+          <strong>agcoding</strong>
+        </a>
+      </p>
+      <p>
+        <a href="mailto:agcoding09@gmail.com"
+           style="color: #fff; text-decoration: none; font-size: 1.2em;">
+          <img src="images/Gmail-logo.png" style="width: 40px; vertical-align: middle;">
+          <strong>agcoding09@gmail.com</strong>
+        </a>
+      </p>
+    </section>
+
+    <br><br><hr><br><br>
+
+    <!-- Footer -->
+    <footer class="fade-in">
+      <p>© 2025 AGcoding. All rights reserved.</p>
+    </footer>
+
+  </main>
+
+  <!-- Scroll-triggered animation JS -->
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    document.querySelectorAll('.scroll-animate').forEach(el => {
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>
