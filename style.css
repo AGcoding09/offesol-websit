@@ -127,15 +127,13 @@ a img:hover {
   }
 
   table {
-    font-size: 1em;
-    display: block;
-    overflow-x: auto;
+    width: 100%;
+    font-size: 0.9em;
   }
 
   th, td {
-    display: block;
-    width: 100%;
-    text-align: left;
+    padding: 8px;
+    font-size: 0.95em;
     border-bottom: 1px solid #000;
   }
 }
